@@ -49,6 +49,7 @@ public class Image {
 		}
     }
 
+	// Used for CloudVisionTest.
 	@SneakyThrows
 	public static ImageData imageDataOf(Path p) {
 		return new ImageData(p.getFileName().toString(), p.toUri().toURL());

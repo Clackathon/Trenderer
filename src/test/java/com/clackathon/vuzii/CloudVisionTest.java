@@ -1,5 +1,6 @@
 package com.clackathon.vuzii;
 
+import com.clackathon.vuzii.api.google.CloudVision;
 import lombok.SneakyThrows;
 import lombok.val;
 import org.junit.Test;

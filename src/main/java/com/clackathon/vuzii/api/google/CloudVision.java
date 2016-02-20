@@ -1,4 +1,4 @@
-package com.clackathon.vuzii;
+package com.clackathon.vuzii.api.google;
 
 import com.google.api.client.googleapis.auth.oauth2.GoogleCredential;
 import com.google.api.client.googleapis.javanet.GoogleNetHttpTransport;

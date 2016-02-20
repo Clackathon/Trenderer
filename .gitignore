@@ -75,3 +75,7 @@ nb-configuration.xml
 # API secrets #
 ###############
 /secrets
+
+# cache #
+#########
+/cache
