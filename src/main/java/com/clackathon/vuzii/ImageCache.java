@@ -14,8 +14,10 @@ public class ImageCache {
 
 	Path cacheDir;
 
+	@SneakyThrows
 	private ImageCache() {
 		cacheDir = Paths.get("./cache/");
+		Files.createDirectories(cacheDir);
 	}
 
 	@SneakyThrows
