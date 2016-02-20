@@ -20,7 +20,7 @@ public class InstagramImageProvider implements ImageProvider {
 	@SneakyThrows
 	private Properties loadProperties() {
 		val p = new Properties();
-		p.load(new FileInputStream("./secrets/"));
+		p.load(new FileInputStream("./secrets/instagram.conf"));
 		return p;
 	}
 
