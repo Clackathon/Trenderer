@@ -22,7 +22,7 @@ public class Image {
 	private ImageData standardResolution;
 	private User uploader;
 	private Date creationTime;
-	private String location;
+	private Location location;
 
 
     @Data
