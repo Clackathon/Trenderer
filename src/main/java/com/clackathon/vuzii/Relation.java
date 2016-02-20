@@ -9,15 +9,19 @@ import java.util.List;
  */
 public class Relation {
 
+
+
+
 	public double relativity(Image a, Image b){
 		List<Double> percentages = new ArrayList<>();
 
 		percentages.add(getTagRelation(a.getUserTags(), b.getUserTags()));
 		percentages.add(getUploaderRelation(a.getUploader(), b.getUploader()));
-		//
 		// percentages.add(getCreationTimeRelation(a.getCreationTime(), b.getCreationTime()));
 		percentages.add(getLocationRelation(a.getLocation(), b.getLocation()));
 		percentages.add(getCommentsRelation(a.getComments(), b.getComments()));
+
+
 
 		/*
 			tags 0.4
