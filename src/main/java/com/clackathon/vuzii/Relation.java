@@ -14,7 +14,8 @@ public class Relation {
 
 		percentages.add(getTagRelation(a.getUserTags(), b.getUserTags()));
 		percentages.add(getUploaderRelation(a.getUploader(), b.getUploader()));
-		percentages.add(getCreationTimeRelation(a.getCreationTime(), b.getCreationTime()));
+		//
+		// percentages.add(getCreationTimeRelation(a.getCreationTime(), b.getCreationTime()));
 		percentages.add(getLocationRelation(a.getLocation(), b.getLocation()));
 		percentages.add(getCommentsRelation(a.getComments(), b.getComments()));
 
@@ -43,12 +44,13 @@ public class Relation {
 		return 1.0 / Math.sqrt(Math.sqrt(longDistance * longDistance + latDistance * latDistance));
 	}
 
-	private Double getCreationTimeRelation(Date creationTime, Date creationTime1) {
-		throw new UnsupportedOperationException();
+	/*private Double getCreationTimeRelation(Date creationTime, Date creationTime1) {
+		return
 	}
+	*/
 
 	private double getUploaderRelation(User uploaderA, User uploaderB) {
-		throw new UnsupportedOperationException();
+		return uploaderA.getName().equals(uploaderB.getName()) ? 1 : 0;
 	}
 
 	private double getTagRelation(List<String> a, List<String> b) {
