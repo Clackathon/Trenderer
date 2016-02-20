@@ -1,6 +1,7 @@
-package com.clackathon.vuzii.api;
+package com.clackathon.vuzii.api.instagram;
 
 import com.clackathon.vuzii.Image;
+import com.clackathon.vuzii.api.ImageProvider;
 import lombok.SneakyThrows;
 import lombok.val;
 import org.jinstagram.Instagram;
