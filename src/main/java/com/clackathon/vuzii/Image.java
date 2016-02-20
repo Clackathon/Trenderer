@@ -5,7 +5,6 @@ import lombok.Data;
 import lombok.SneakyThrows;
 
 import java.awt.image.BufferedImage;
-import java.net.URI;
 import java.net.URL;
 import java.nio.file.Path;
 import java.util.Date;
