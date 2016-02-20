@@ -24,6 +24,7 @@ public class Relation {
 			creationTime 0.9
 			location 0.6
 			comments check for hash-tags/similar words 0.8
+			location of likes (javascript to check)
 
 		 */
 
