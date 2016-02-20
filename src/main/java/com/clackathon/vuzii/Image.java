@@ -20,6 +20,7 @@ public class Image {
 	ImageData standard;
 	User uploader;
 	Date creationTime;
+	String location;
 
 
     @Data
