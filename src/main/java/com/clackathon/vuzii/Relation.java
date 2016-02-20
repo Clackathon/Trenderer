@@ -12,7 +12,7 @@ public class Relation {
 	public double relativity(Image a, Image b){
 		List<Double> percentages = new ArrayList<>();
 
-		percentages.add(getTagRelation(a.getTags(), b.getTags()));
+		percentages.add(getTagRelation(a.getUserTags(), b.getUserTags()));
 		percentages.add(getUploaderRelation(a.getUploader(), b.getUploader()));
 		percentages.add(getCreationTimeRelation(a.getCreationTime(), b.getCreationTime()));
 		percentages.add(getLocationRelation(a.getLocation(), b.getLocation()));
@@ -36,19 +36,18 @@ public class Relation {
 		return ((double) intersection.size())/Math.max(commentsA.size(),commentsB.size());
 	}
 
-	private double getLocationRelation(Location locationA, Location locationB) {
-		
-		return
+	private double getLocationRelation(Location a, Location b) {
+		double longDistance = a.getLongitude() - b.getLongitude();
+		double latDistance = Math.abs(a.getLatitude() - b.getLatitude());
+		return 1.0 / Math.sqrt(Math.sqrt(longDistance * longDistance + latDistance * latDistance));
 	}
 
 	private Double getCreationTimeRelation(Date creationTime, Date creationTime1) {
-
-		return
+		throw new UnsupportedOperationException();
 	}
 
 	private double getUploaderRelation(User uploaderA, User uploaderB) {
-
-		return
+		throw new UnsupportedOperationException();
 	}
 
 	private double getTagRelation(List<String> a, List<String> b) {
