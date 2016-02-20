@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Euan on 20/02/2016.
+ * @author Euan
  */
 public class Relation {
 
@@ -19,7 +19,7 @@ public class Relation {
 			uploader 0.8
 			creationTime 0.9
 			location 0.6
-			comments check for hastags/similar words 0.8
+			comments check for hash-tags/similar words 0.8
 
 		 */
 
