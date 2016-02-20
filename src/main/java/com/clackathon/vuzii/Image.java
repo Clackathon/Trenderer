@@ -16,7 +16,8 @@ import java.util.List;
 @Data
 public class Image {
 	private long mediaId;
-	private List<String> tags;
+	private List<String> user_tags;
+	private List<String> cloud_vision_tags;
 	private List<User> likers;
 	private List<String> comments;
 	private ImageData standardResolution;
