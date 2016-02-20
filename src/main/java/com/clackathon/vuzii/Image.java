@@ -16,21 +16,20 @@ import java.util.List;
  */
 @Data
 public class Image {
-	long mediaID;
-	List<String> tags;
-	List<User> likers;
-	List<String> comments;
-	ImageData standard;
-	User uploader;
-	Date creationTime;
-	String location;
-
+	private long mediaID;
+	private List<String> tags;
+	private List<User> likers;
+	private List<String> comments;
+	private ImageData standard;
+	private User uploader;
+	private Date creationTime;
+	private String location;
 
     @Data
     public static class ImageData {
-		URL imageLocation;
-		int width;
-        int height;
+		private URL imageLocation;
+		private int width;
+        private int height;
 
 		@SneakyThrows
 		public BufferedImage download() {
