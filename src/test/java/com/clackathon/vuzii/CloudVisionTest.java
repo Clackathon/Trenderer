@@ -11,6 +11,6 @@ public class CloudVisionTest {
 	@SneakyThrows
 	@Test
 	public void testOnTestImages() {
-		CloudVision.run("bathroom.jpg");
+		CloudVision.getLabels("bathroom.jpg");
 	}
 }

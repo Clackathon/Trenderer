@@ -21,34 +21,34 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.security.GeneralSecurityException;
 import java.util.List;
+import com.clackathon.vuzii.Image.ImageData;
+import lombok.SneakyThrows;
 
-/**
- * A sample application that uses the Vision API to label an image.
- */
 @SuppressWarnings("serial")
 public class CloudVision {
-	/**
-	 * Be sure to specify the name of your application. If the application name is {@code null} or
-	 * blank, the application will log a warning. Suggested format is "MyCompany-ProductName/1.0".
-	 */
+
 	private static final String APPLICATION_NAME = "Clackathon-Trendr/1.0";
 	private static final int MAX_LABELS = 10;
+	private final Vision vision;
+	private ImageData image;
 
-	// [START run_application]
-
-	/**
-	 * Annotates an image using the Vision API.
-	 */
-	public static void run(String filename) throws IOException, GeneralSecurityException {
-		Path imagePath = Paths.get("./src/test/resources/" + filename);
-		CloudVision app = new CloudVision(getVisionService());
-		printLabels(System.out, imagePath, app.labelImage(imagePath, MAX_LABELS));
+	@SneakyThrows
+	public CloudVision(ImageData image) {
+		this.image = image;
+		this.vision = getVisionService();
 	}
 
-	/**
-	 * Prints the labels received from the Vision API.
-	 */
-	public static void printLabels(PrintStream out, Path imagePath, List<EntityAnnotation> labels) {
+	// Returns a list of labels of an image using the Vision API.
+	// Maximum: 10 labels.
+	// Minimum score: 0.6.
+	public List<String> getLabels(ImageData image) throws IOException, GeneralSecurityException {
+//		Path imagePath = Paths.get("./src/test/resources/" + filename);
+//		printLabels(System.out, imagePath, labelImage(imagePath, MAX_LABELS));
+		List<EntityAnnotation>
+	}
+
+	// Prints the labels received from the Vision API.
+	private void printLabels(PrintStream out, Path imagePath, List<EntityAnnotation> labels) {
 		out.printf("Labels for image %s:\n", imagePath);
 		for (EntityAnnotation label : labels) {
 			out.printf(
@@ -60,14 +60,9 @@ public class CloudVision {
 			out.println("\tNo labels found.");
 		}
 	}
-	// [END run_application]
 
-	// [START authenticate]
-
-	/**
-	 * Connects to the Vision API using Application Default Credentials.
-	 */
-	public static Vision getVisionService() throws IOException, GeneralSecurityException {
+	// Connects to the Vision API using Application Default Credentials.
+	private Vision getVisionService() throws IOException, GeneralSecurityException {
 		GoogleCredential credential =
 			GoogleCredential.getApplicationDefault().createScoped(VisionScopes.all());
 		JsonFactory jsonFactory = JacksonFactory.getDefaultInstance();
@@ -75,22 +70,9 @@ public class CloudVision {
 			.setApplicationName(APPLICATION_NAME)
 			.build();
 	}
-	// [END authenticate]
 
-	private final Vision vision;
-
-	/**
-	 * Constructs a {@link CloudVision} which connects to the Vision API.
-	 */
-	public CloudVision(Vision vision) {
-		this.vision = vision;
-	}
-
-	/**
-	 * Gets up to {@code maxResults} labels for an image stored at {@code path}.
-	 */
-	public List<EntityAnnotation> labelImage(Path path, int maxResults) throws IOException {
-		// [START construct_request]
+	// Gets up to {@code maxResults} labels for an image stored at {@code path}.
+	private List<EntityAnnotation> labelImage(Path path, int maxResults) throws IOException {
 		byte[] data = Files.readAllBytes(path);
 
 		AnnotateImageRequest request =
@@ -105,11 +87,8 @@ public class CloudVision {
 				.annotate(new BatchAnnotateImagesRequest().setRequests(ImmutableList.of(request)));
 		// Due to a bug: requests to Vision API containing large images fail when GZipped.
 		annotate.setDisableGZipContent(true);
-		// [END construct_request]
 
-		// [START parse_response]
 		BatchAnnotateImagesResponse response = annotate.execute();
 		return response.getResponses().get(0).getLabelAnnotations();
-		// [END parse_response]
 	}
 }
