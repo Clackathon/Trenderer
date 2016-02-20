@@ -1,17 +1,19 @@
 package com.clackathon.vuzii;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by Euan on 20/02/2016.
  */
 public class Relation {
 
-
 	public double relativity(){
 		double relative = 0;
 
-
-
-
+		Image imageA;
+		Image imageB;
+		List<Double> percentages = new ArrayList<>();
 		/*
 			tags 0.4
 			uploader 0.8
@@ -21,7 +23,18 @@ public class Relation {
 
 		 */
 
-		return relative;
+		return calculateAverage(percentages);
+	}
+
+	private static double calculateAverage(List<Double> values) {
+		double sum = 0;
+		if(!values.isEmpty()) {
+			for (double value : values) {
+				sum += value;
+			}
+			return sum / values.size();
+		}
+		return sum;
 	}
 
 
