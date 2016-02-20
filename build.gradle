@@ -2,6 +2,7 @@ plugins {
 	id 'maven'
 	id 'java'
 	id 'idea'
+	id 'application'
 }
 
 defaultTasks 'build'
