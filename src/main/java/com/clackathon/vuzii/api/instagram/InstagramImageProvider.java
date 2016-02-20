@@ -14,8 +14,8 @@ import java.util.Properties;
 import java.util.Scanner;
 
 public class InstagramImageProvider implements ImageProvider {
-	private Instagram instagram = getInstagramAuthService();
 	final Properties apiProperties = loadProperties();
+	private Instagram instagram = getInstagramAuthService();
 
 	@SneakyThrows
 	private Properties loadProperties() {
