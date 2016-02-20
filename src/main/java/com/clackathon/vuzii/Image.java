@@ -9,6 +9,7 @@ import java.net.URL;
 import java.nio.file.Path;
 import java.util.Date;
 import java.util.List;
+import java.util.Set;
 
 /**
  *
@@ -26,6 +27,7 @@ public class Image {
 	private User uploader;
 	private Date creationTime;
 	private Location location;
+	private Set<Image> linkifiedImages;
 
     @Data
 	@AllArgsConstructor
