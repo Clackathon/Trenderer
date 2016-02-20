@@ -14,21 +14,27 @@ import com.google.api.services.vision.v1.model.Feature;
 import com.google.api.services.vision.v1.model.Image;
 import com.google.common.collect.ImmutableList;
 
+import java.awt.image.BufferedImage;
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.security.GeneralSecurityException;
+import java.util.ArrayList;
 import java.util.List;
 import com.clackathon.vuzii.Image.ImageData;
 import lombok.SneakyThrows;
+
+import javax.imageio.ImageIO;
 
 @SuppressWarnings("serial")
 public class CloudVision {
 
 	private static final String APPLICATION_NAME = "Clackathon-Trendr/1.0";
 	private static final int MAX_LABELS = 10;
+	private static final float MINIMUM_SCORE = 0.6f;
 	private final Vision vision;
 	private ImageData image;
 
@@ -39,26 +45,16 @@ public class CloudVision {
 	}
 
 	// Returns a list of labels of an image using the Vision API.
-	// Maximum: 10 labels.
-	// Minimum score: 0.6.
-	public List<String> getLabels(ImageData image) throws IOException, GeneralSecurityException {
-//		Path imagePath = Paths.get("./src/test/resources/" + filename);
-//		printLabels(System.out, imagePath, labelImage(imagePath, MAX_LABELS));
-		List<EntityAnnotation>
-	}
-
-	// Prints the labels received from the Vision API.
-	private void printLabels(PrintStream out, Path imagePath, List<EntityAnnotation> labels) {
-		out.printf("Labels for image %s:\n", imagePath);
+	// List depends on MAX_LABELS and MINIMUM_SCORE.
+	public List<String> getLabels() throws IOException, GeneralSecurityException {
+		List<EntityAnnotation> labels = labelImage(image.download());
+		List<String> labelNames = new ArrayList<>();
 		for (EntityAnnotation label : labels) {
-			out.printf(
-				"\t%s (score: %.3f)\n",
-				label.getDescription(),
-				label.getScore());
+			if (label.getScore() >= MINIMUM_SCORE) {
+				labelNames.add(label.getDescription());
+			}
 		}
-		if (labels.isEmpty()) {
-			out.println("\tNo labels found.");
-		}
+		return labelNames;
 	}
 
 	// Connects to the Vision API using Application Default Credentials.
@@ -72,8 +68,11 @@ public class CloudVision {
 	}
 
 	// Gets up to {@code maxResults} labels for an image stored at {@code path}.
-	private List<EntityAnnotation> labelImage(Path path, int maxResults) throws IOException {
-		byte[] data = Files.readAllBytes(path);
+	private List<EntityAnnotation> labelImage(BufferedImage image) throws IOException {
+		// convert BufferedImage to Byte[]
+		ByteArrayOutputStream baos = new ByteArrayOutputStream();
+		ImageIO.write(image, "jpg", baos);
+		byte[] data = baos.toByteArray();
 
 		AnnotateImageRequest request =
 			new AnnotateImageRequest()
@@ -81,7 +80,7 @@ public class CloudVision {
 				.setFeatures(ImmutableList.of(
 					new Feature()
 						.setType("LABEL_DETECTION")
-						.setMaxResults(maxResults)));
+						.setMaxResults(MAX_LABELS)));
 		Vision.Images.Annotate annotate =
 			vision.images()
 				.annotate(new BatchAnnotateImagesRequest().setRequests(ImmutableList.of(request)));
