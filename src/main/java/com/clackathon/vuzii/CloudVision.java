@@ -32,23 +32,15 @@ public class CloudVision {
 	 * blank, the application will log a warning. Suggested format is "MyCompany-ProductName/1.0".
 	 */
 	private static final String APPLICATION_NAME = "Clackathon-Trendr/1.0";
-
-	private static final int MAX_LABELS = 3;
+	private static final int MAX_LABELS = 10;
 
 	// [START run_application]
 
 	/**
 	 * Annotates an image using the Vision API.
 	 */
-	public static void main(String[] args) throws IOException, GeneralSecurityException {
-		if (args.length != 1) {
-			System.err.println("Missing imagePath argument.");
-			System.err.println("Usage:");
-			System.err.printf("\tjava %s imagePath\n", CloudVision.class.getCanonicalName());
-			System.exit(1);
-		}
-		Path imagePath = Paths.get(args[0]);
-
+	public static void run(String filename) throws IOException, GeneralSecurityException {
+		Path imagePath = Paths.get("./src/test/resources/" + filename);
 		CloudVision app = new CloudVision(getVisionService());
 		printLabels(System.out, imagePath, app.labelImage(imagePath, MAX_LABELS));
 	}

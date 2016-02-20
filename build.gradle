@@ -28,7 +28,9 @@ dependencies {
 	hidden 'org.projectlombok:lombok:1.16.4'
 }
 
-environment 'GOOGLE_APPLICATION_CREDENTIALS', file('./secrets/credentials.json').absoluteFile
+test {
+	environment 'GOOGLE_APPLICATION_CREDENTIALS', file('./secrets/CloudVisionCredentials.json').absoluteFile
+}
 
 tasks.withType(JavaCompile) {
 	sourceCompatibility = 8
