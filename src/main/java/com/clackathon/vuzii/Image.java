@@ -19,10 +19,11 @@ public class Image {
 	private List<String> tags;
 	private List<User> likers;
 	private List<String> comments;
-	private ImageData standard;
+	private ImageData standardResolution;
 	private User uploader;
 	private Date creationTime;
-	private String location;
+	private Location location;
+
 
     @Data
     public class ImageData {
