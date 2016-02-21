@@ -24,6 +24,7 @@ dependencies {
 	compile 'com.google.api-client:google-api-client-assembly:1.21.0'
 	compile 'com.google.apis:google-api-services-vision:v1-rev6-1.21.0'
 	compile 'com.google.truth:truth:0.28'
+	compile 'org.slf4j:slf4j-simple:1.7.16'
 	hidden 'org.jetbrains:annotations:15.0'
 	hidden 'org.projectlombok:lombok:1.16.4'
 }

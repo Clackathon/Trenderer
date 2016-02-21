@@ -39,7 +39,7 @@ public class InstagramImageProvider implements ImageProvider {
 		String tokenToken = apiProperties.getProperty("INSTAGRAM_TOKEN_TOKEN");
 		Token token;
 
-		if (tokenSecret == null || tokenToken == null) {
+		if (tokenSecret != null && tokenToken != null) {
 			token = new Token(tokenToken, tokenSecret);
 		} else {
 			String authorizationUrl = service.getAuthorizationUrl();
@@ -64,7 +64,7 @@ public class InstagramImageProvider implements ImageProvider {
 	 * Sets up verifier token for first use
 	 */
 	public static void main(String[] args) {
-		new InstagramImageProvider().getInstagramAuthService();
+		System.out.println(new InstagramImageProvider().getInstagramAuthService().getAccessToken());
 	}
 
 	@SneakyThrows
