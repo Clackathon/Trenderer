@@ -41,7 +41,7 @@ tasks.withType(JavaCompile) {
 	options.with {
 		encoding = 'UTF-8'
 		compilerArgs <<
-			"-Xlint:all" <<0
+			"-Xlint:all" <<
 			"-Xlint:-path" <<
 			"-Xlint:-rawtypes" <<
 			"-Xlint:-processing"

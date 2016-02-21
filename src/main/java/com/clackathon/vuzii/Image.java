@@ -11,6 +11,7 @@ import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.concurrent.atomic.AtomicLong;
 
 /**
  *
@@ -19,7 +20,9 @@ import java.util.Set;
  */
 @Data
 public class Image {
-	private String mediaId;
+	private static final AtomicLong mediaIdCount = new AtomicLong();
+	private long mediaId = mediaIdCount.incrementAndGet();
+	private String label;
 	private List<String> userTags;
 	private List<String> cloudVisionTags;
 	private List<User> likers;
@@ -28,7 +31,7 @@ public class Image {
 	private User uploader;
 	private LocalDateTime creationTime;
 	private Location location;
-	private Set<String> linkifiedImages = new HashSet<>();
+	private Set<Long> linkifiedImages = new HashSet<>();
 
     @Data
 	@AllArgsConstructor

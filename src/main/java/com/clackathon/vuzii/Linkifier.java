@@ -1,6 +1,7 @@
 package com.clackathon.vuzii;
 
 import lombok.RequiredArgsConstructor;
+import lombok.val;
 
 import java.util.List;
 
@@ -29,9 +30,18 @@ public class Linkifier {
 		if (relativity < 0.19)
 			return;
 		// link with relatives
-		a.getLinkifiedImages().add(b.getMediaId());
-		b.getLinkifiedImages().add(a.getMediaId());
 
+		addLink(a, b);
+	}
+
+	private void addLink(Image a, Image b) {
+		val aLinked = a.getLinkifiedImages();
+		val bLinked = b.getLinkifiedImages();
+
+		if (aLinked.contains(b.getMediaId()) || bLinked.contains(a.getMediaId()))
+			return;
+
+		aLinked.add(b.getMediaId());
 	}
 
 	public void dumpStats() {
