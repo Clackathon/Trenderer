@@ -33,6 +33,7 @@ public class InstagramImageProvider implements ImageProvider {
 			.apiKey(apiProperties.getProperty("INSTAGRAM_KEY"))
 			.apiSecret(apiProperties.getProperty("INSTAGRAM_SECRET"))
 			.callback("http://localhost/")
+			.scope("basic public_content follower_list comments relationships like")
 			.build();
 
 		String tokenSecret = apiProperties.getProperty("INSTAGRAM_TOKEN_SECRET");
@@ -69,7 +70,8 @@ public class InstagramImageProvider implements ImageProvider {
 
 	@SneakyThrows
 	public List<Image> getImages() {
-		System.out.println(instagram.getUserRecentMedia());
+		val mediaFeed = instagram.getUserRecentMedia(100, null, null);
+		System.out.println(mediaFeed.getData());
 		throw new UnsupportedOperationException("todo");
 	}
 }
