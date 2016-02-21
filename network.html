@@ -19,35 +19,35 @@
 <div id = "mynetwork"></div>
 
 <script type = "text/javascript">
-	// create an array with nodes
-	var nodes = new vis.DataSet([
-		{id: 1, label: 'Node 1'},
-		{id: 2, label: 'Node 2'},
-		{id: 3, label: 'Node 3'},
-		{id: 4, label: 'Node 4'},
-		{id: 5, label: 'Node 5'}
-	]);
+	$.getJSON("./linked.json", function (data) {
+		var nodeArray = [];
+		var linkArray = [];
 
-	// create an array with edges
-	var edges = new vis.DataSet([
-		{from: 1, to: 3},
-		{from: 1, to: 2},
-		{from: 2, to: 4},
-		{from: 2, to: 5}
-	]);
+		for (var key in data) {
+			var x = data[key];
+			nodeArray.add({id: x.mediaId, label: x.mediaId});
+			for (var other in x.linkifiedImages) {
+				linkArray.add({from: x.id, to: other});
+			}
+		}
 
-	// create a network
-	var container = document.getElementById('mynetwork');
+		var nodes = new vis.DataSet(nodeArray);
 
-	// provide the data in the vis format
-	var data = {
-		nodes: nodes,
-		edges: edges
-	};
-	var options = {};
+		var edges = new vis.DataSet(linkArray);
 
-	// initialize your network!
-	var network = new vis.Network(container, data, options);
+		// create a network
+		var container = document.getElementById('mynetwork');
+
+		// provide the data in the vis format
+		var data = {
+			nodes: nodes,
+			edges: edges
+		};
+		var options = {};
+
+		// initialize your network!
+		var network = new vis.Network(container, data, options);
+	});
 </script>
 </body>
 </html>
