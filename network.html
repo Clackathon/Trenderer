@@ -51,8 +51,17 @@
 		};
 		var options = {};
 
+		function showPopup(nodeId) {
+			var node = data[nodeId];
+		}
+
 		// initialize your network!
 		var network = new vis.Network(container, data, options);
+		network.on('doubleClick', function (e) {
+			console.log(e.nodes);
+			if (e.nodes.length == 1)
+				showPopup(e.nodes[0]);
+		});
 	});
 </script>
 </body>
