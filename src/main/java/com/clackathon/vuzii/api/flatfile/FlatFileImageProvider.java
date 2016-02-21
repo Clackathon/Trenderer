@@ -33,6 +33,7 @@ public class FlatFileImageProvider implements ImageProvider {
 		image.setMediaId(p.getFileName().toString());
 		image.setStandardResolution(new Image.ImageData(p.getFileName().toString(), p.toFile().toURL()));
 		image.setCloudVisionTags(new CloudVision(image.getStandardResolution()).getLabels());
+		System.out.println(image);
 		return image;
 	}
 
