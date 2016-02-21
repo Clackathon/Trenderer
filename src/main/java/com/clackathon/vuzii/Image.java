@@ -35,16 +35,6 @@ public class Image {
     public static class ImageData {
 		private String uniqueId;
 		private URL imageLocation;
-		private int width;
-        private int height;
-
-		public ImageData(String s, URL uri) {
-			uniqueId = s;
-			imageLocation = uri;
-			BufferedImage downloaded = download();
-			width = downloaded.getWidth();
-			height = downloaded.getHeight();
-		}
 
 		@SneakyThrows
 		public BufferedImage download() {

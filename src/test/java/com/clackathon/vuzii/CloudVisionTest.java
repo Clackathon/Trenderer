@@ -20,7 +20,7 @@ public class CloudVisionTest {
 		for (File image : imageFiles) {
 			System.out.println(
 				image.getName() +
-				new CloudVision(Image.imageDataOf(image.toPath())).getLabels()
+				CloudVision.INSTANCE.getLabels(Image.imageDataOf(image.toPath()))
 			);
 		}
 	}

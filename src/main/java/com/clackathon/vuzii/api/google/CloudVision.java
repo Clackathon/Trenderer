@@ -1,60 +1,57 @@
 package com.clackathon.vuzii.api.google;
 
+import com.clackathon.vuzii.Image.ImageData;
+import com.clackathon.vuzii.ImageCache;
 import com.google.api.client.googleapis.auth.oauth2.GoogleCredential;
 import com.google.api.client.googleapis.javanet.GoogleNetHttpTransport;
 import com.google.api.client.json.JsonFactory;
 import com.google.api.client.json.jackson2.JacksonFactory;
 import com.google.api.services.vision.v1.Vision;
 import com.google.api.services.vision.v1.VisionScopes;
-import com.google.api.services.vision.v1.model.AnnotateImageRequest;
-import com.google.api.services.vision.v1.model.BatchAnnotateImagesRequest;
-import com.google.api.services.vision.v1.model.BatchAnnotateImagesResponse;
-import com.google.api.services.vision.v1.model.EntityAnnotation;
-import com.google.api.services.vision.v1.model.Feature;
-import com.google.api.services.vision.v1.model.Image;
+import com.google.api.services.vision.v1.model.*;
 import com.google.common.collect.ImmutableList;
-
-import java.awt.image.BufferedImage;
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.io.PrintStream;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.security.GeneralSecurityException;
-import java.util.ArrayList;
-import java.util.List;
-import com.clackathon.vuzii.Image.ImageData;
 import lombok.SneakyThrows;
 
 import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.UncheckedIOException;
+import java.security.GeneralSecurityException;
+import java.util.ArrayList;
+import java.util.List;
 
 @SuppressWarnings("serial")
 public class CloudVision {
-
+	public static final CloudVision INSTANCE = new CloudVision();
 	private static final String APPLICATION_NAME = "Clackathon-Trendr/1.0";
 	private static final int MAX_LABELS = 10;
 	private static final float MINIMUM_SCORE = 0.6f;
 	private final Vision vision;
-	private ImageData image;
 
 	@SneakyThrows
-	public CloudVision(ImageData image) {
-		this.image = image;
+	private CloudVision() {
 		this.vision = getVisionService();
 	}
 
 	// Returns a list of labels of an image using the Vision API.
 	// List depends on MAX_LABELS and MINIMUM_SCORE.
-	public List<String> getLabels() throws IOException, GeneralSecurityException {
-		List<EntityAnnotation> labels = labelImage(image.download());
-		List<String> labelNames = new ArrayList<>();
-		for (EntityAnnotation label : labels) {
-			if (label.getScore() >= MINIMUM_SCORE) {
-				labelNames.add(label.getDescription());
+	public List<String> getLabels(ImageData image) throws IOException, GeneralSecurityException {
+		return ImageCache.INSTANCE.getTags(() -> {
+			List<EntityAnnotation> labels = null;
+			try {
+				labels = labelImage(image.download());
+			} catch (IOException e) {
+				throw new UncheckedIOException(e);
 			}
-		}
-		return labelNames;
+			List<String> labelNames = new ArrayList<>();
+			for (EntityAnnotation label : labels) {
+				if (label.getScore() >= MINIMUM_SCORE) {
+					labelNames.add(label.getDescription());
+				}
+			}
+			return labelNames;
+		}, image.getUniqueId());
 	}
 
 	// Connects to the Vision API using Application Default Credentials.

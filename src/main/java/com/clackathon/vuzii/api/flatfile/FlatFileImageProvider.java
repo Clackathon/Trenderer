@@ -32,8 +32,8 @@ public class FlatFileImageProvider implements ImageProvider {
 		image.setLocation(generateLocation());
 		image.setCreationTime(LocalDateTime.now());
 		image.setMediaId(p.getFileName().toString());
-		image.setStandardResolution(new Image.ImageData(p.getFileName().toString(), p.toFile().toURL()));
-		image.setCloudVisionTags(new CloudVision(image.getStandardResolution()).getLabels());
+		image.setStandardResolution(new Image.ImageData(p.getFileName().toString(), p.toFile().toURI().toURL()));
+		image.setCloudVisionTags(CloudVision.INSTANCE.getLabels(image.getStandardResolution()));
 		image.setUserTags(generateTags());
 		image.setComments(generateComments());
 		val name = generateName();
