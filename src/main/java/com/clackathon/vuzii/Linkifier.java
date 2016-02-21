@@ -26,7 +26,7 @@ public class Linkifier {
 
 		double relativity = relation.relativity(a, b);
 
-		if (relativity < 0.7)
+		if (relativity < 0.19)
 			return;
 		// link with relatives
 		a.getLinkifiedImages().add(b.getMediaId());

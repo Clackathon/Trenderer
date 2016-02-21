@@ -1,9 +1,7 @@
 package com.clackathon.vuzii;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
-import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -18,13 +16,14 @@ public class Relation {
 	public double relativity(Image a, Image b){
 		List<Double> percentages = new ArrayList<>();
 
-		percentages.add(getTagRelation(a.getUserTags(), b.getUserTags()));
-		percentages.add(getUploaderRelation(a.getUploader(), b.getUploader()));
-		// percentages.add(getCreationTimeRelation(a.getCreationTime(), b.getCreationTime()));
-		percentages.add(getLocationRelation(a.getLocation(), b.getLocation()));
-		percentages.add(getLocationRelation(a.getLocation(), b.getLocation()));
-		percentages.add(getCommentsRelation(a.getComments(), b.getComments()));
-		percentages.add(getCommentRelation(a.getComments(), b.getComments()));
+		percentages.add(getTagRelation(a.getCloudVisionTags(), b.getCloudVisionTags()));
+//		percentages.add(getTagRelation(a.getUserTags(), b.getUserTags()));
+//		percentages.add(getUploaderRelation(a.getUploader(), b.getUploader()));
+//		// percentages.add(getCreationTimeRelation(a.getCreationTime(), b.getCreationTime()));
+//		percentages.add(getLocationRelation(a.getLocation(), b.getLocation()));
+//		percentages.add(getLocationRelation(a.getLocation(), b.getLocation()));
+//		percentages.add(getCommentsRelation(a.getComments(), b.getComments()));
+//		percentages.add(getCommentRelation(a.getComments(), b.getComments()));
 
 
 
@@ -65,7 +64,7 @@ public class Relation {
 	private double getTagRelation(List<String> a, List<String> b) {
 		List<String> intersection = new ArrayList<>(a);
 		if(a.isEmpty() && b.isEmpty()){
-			return 0.2; // cause reasons
+			return 0; // cause reasons
 		}
 		intersection.retainAll(b);
 		return ((double) intersection.size())/Math.max(a.size(),b.size());

@@ -18,6 +18,6 @@ public class Main {
 		linkifier.linkify();
 		linkifier.dumpStats();
 		ObjectMapper mapper = new ObjectMapper();
-		mapper.writerWithDefaultPrettyPrinter().writeValue(new File("./build/linked.json"), linkifier.images);
+		mapper.writerWithDefaultPrettyPrinter().writeValue(new File("./linked.json"), linkifier.images);
 	}
 }
