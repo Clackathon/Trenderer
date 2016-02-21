@@ -33,4 +33,12 @@ public class Linkifier {
 		b.getLinkifiedImages().add(a.getMediaId());
 
 	}
+
+	public void dumpStats() {
+		int links = 0;
+		for (Image a : images) {
+			links += a.getLinkifiedImages().size();
+		}
+		System.out.println(images.size() + " images with " + links + " links between images");
+	}
 }
