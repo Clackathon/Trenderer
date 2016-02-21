@@ -71,7 +71,7 @@ public class InstagramImageProvider implements ImageProvider {
 	@SneakyThrows
 	public List<Image> getImages() {
 		val mediaFeed = instagram.getUserRecentMedia(100, null, null);
-		System.out.println(mediaFeed.getData());
+		System.out.println(instagram.getUserFollowList(instagram.getCurrentUserInfo().getData().getId()));
 		throw new UnsupportedOperationException("todo");
 	}
 }

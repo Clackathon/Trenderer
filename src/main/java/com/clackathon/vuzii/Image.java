@@ -7,7 +7,7 @@ import lombok.SneakyThrows;
 import java.awt.image.BufferedImage;
 import java.net.URL;
 import java.nio.file.Path;
-import java.util.Date;
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Set;
 
@@ -18,14 +18,14 @@ import java.util.Set;
  */
 @Data
 public class Image {
-	private long mediaId;
+	private String mediaId;
 	private List<String> userTags;
 	private List<String> cloudVisionTags;
 	private List<User> likers;
 	private List<String> comments;
 	private ImageData standardResolution;
 	private User uploader;
-	private Date creationTime;
+	private LocalDateTime creationTime;
 	private Location location;
 	private Set<Image> linkifiedImages;
 
