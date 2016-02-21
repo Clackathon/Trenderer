@@ -8,6 +8,7 @@ import java.awt.image.BufferedImage;
 import java.net.URL;
 import java.nio.file.Path;
 import java.time.LocalDateTime;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -27,7 +28,7 @@ public class Image {
 	private User uploader;
 	private LocalDateTime creationTime;
 	private Location location;
-	private Set<Image> linkifiedImages;
+	private Set<String> linkifiedImages = new HashSet<>();
 
     @Data
 	@AllArgsConstructor

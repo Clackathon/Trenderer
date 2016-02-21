@@ -29,8 +29,8 @@ public class Linkifier {
 		if (relativity < 0.7)
 			return;
 		// link with relatives
-		a.getLinkifiedImages().add(b);
-		b.getLinkifiedImages().add(a);
+		a.getLinkifiedImages().add(b.getMediaId());
+		b.getLinkifiedImages().add(a.getMediaId());
 
 	}
 }
