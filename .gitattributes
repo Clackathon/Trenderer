@@ -30,13 +30,16 @@
 *.class         binary
 *.dll           binary
 *.ear           binary
+*.eot           binary
 *.gif           binary
 *.ico           binary
 *.jar           binary
 *.jpg           binary
 *.jpeg          binary
 *.odg           binary
+*.otf           binary
 *.png           binary
 *.so            binary
 *.ttf           binary
 *.war           binary
+*.woff          binary
