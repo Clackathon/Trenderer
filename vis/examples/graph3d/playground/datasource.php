@@ -50,25 +50,24 @@ ________________________________________________________________________________
 
 /**
  * A custom function
- */ 
-function custom($x, $y) {
-  $d = sqrt(pow($x/100, 2) + pow($y/100, 2));
-  
-  return 50 * exp(-5 * $d / 10) * sin($d*5);
+ */
+function custom($x, $y)
+{
+	$d = sqrt(pow($x / 100, 2) + pow($y / 100, 2));
+
+	return 50 * exp(-5 * $d / 10) * sin($d * 5);
 }
-
-
 
 
 // retrieve parameters
 $default_stepnum = 25;
 
-$xmin     = isset($_REQUEST['xmin'])     ? (float)$_REQUEST['xmin']   : -100;
-$xmax     = isset($_REQUEST['xmax'])     ? (float)$_REQUEST['xmax']   : 100;
+$xmin = isset($_REQUEST['xmin']) ? (float)$_REQUEST['xmin'] : -100;
+$xmax = isset($_REQUEST['xmax']) ? (float)$_REQUEST['xmax'] : 100;
 $xstepnum = isset($_REQUEST['xstepnum']) ? (int)$_REQUEST['xstepnum'] : $default_stepnum;
 
-$ymin     = isset($_REQUEST['ymin'])     ? (float)$_REQUEST['ymin']   : -100;
-$ymax     = isset($_REQUEST['ymax'])     ? (float)$_REQUEST['ymax']   : 100;
+$ymin = isset($_REQUEST['ymin']) ? (float)$_REQUEST['ymin'] : -100;
+$ymax = isset($_REQUEST['ymax']) ? (float)$_REQUEST['ymax'] : 100;
 $ystepnum = isset($_REQUEST['ystepnum']) ? (int)$_REQUEST['ystepnum'] : $default_stepnum;
 
 // in the reply we must fill in the request id that came with the request
@@ -76,14 +75,14 @@ $reqId = getReqId();
 
 // check for a maximum number of datapoints (for safety)
 if ($xstepnum * $ystepnum > 10000) {
-  echo "google.visualization.Query.setResponse({
+	echo "google.visualization.Query.setResponse({
     version:'0.6',
     reqId:'$reqId',
     status:'error',
     errors:[{reason:'not_supported', message:'Maximum number of datapoints exceeded'}]
   });";
 
-  exit;
+	exit;
 }
 
 
@@ -110,20 +109,19 @@ echo "google.visualization.Query.setResponse({
 $first = true;
 $xstep = ($xmax - $xmin) / $xstepnum;
 $ystep = ($ymax - $ymin) / $ystepnum;
-for ($x = $xmin; $x < $xmax; $x+=$xstep) {
-  for ($y = $ymin; $y < $ymax; $y+=$ystep) {
-    $value = custom($x,$y);
-    
-    if (!$first) {
-      echo ",\n";
-    } 
-    else {
-      echo "\n";
-    }
-    echo "      {c:[{v:$x}, {v:$y}, {v:$value}]}";
-    
-    $first = false;
-  }
+for ($x = $xmin; $x < $xmax; $x += $xstep) {
+	for ($y = $ymin; $y < $ymax; $y += $ystep) {
+		$value = custom($x, $y);
+
+		if (!$first) {
+			echo ",\n";
+		} else {
+			echo "\n";
+		}
+		echo "      {c:[{v:$x}, {v:$y}, {v:$value}]}";
+
+		$first = false;
+	}
 }
 
 
@@ -138,17 +136,18 @@ echo "
 /**
  * Retrieve the request id from the get/post data
  * @return {number} $reqId       The request id, or 0 if not found
- */ 
-function getReqId() {
-  $reqId = 0;
+ */
+function getReqId()
+{
+	$reqId = 0;
 
-  foreach ($_REQUEST as $req) {
-    if (substr($req, 0,6) == "reqId:") {
-      $reqId = substr($req, 6);
-    }
-  }
+	foreach ($_REQUEST as $req) {
+		if (substr($req, 0, 6) == "reqId:") {
+			$reqId = substr($req, 6);
+		}
+	}
 
-  return $reqId;
+	return $reqId;
 }
 
 
