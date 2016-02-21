@@ -13,7 +13,7 @@ public class Linkifier {
 	public final List<Image> images;
 	public final Map<Long, Image> imagesById = new HashMap<>();
 	public final Relation relation;
-	private static final int MAX_LINKS = 10;
+	private static final int MAX_LINKS = 8;
 
 	public Linkifier(List<Image> images, Relation relation) {
 		this.images = images;
