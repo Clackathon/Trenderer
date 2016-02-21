@@ -67,7 +67,7 @@ public class Relation {
 			return 0; // cause reasons
 		}
 		intersection.retainAll(b);
-		return ((double) intersection.size())/Math.max(a.size(),b.size());
+		return ((double) intersection.size())/(2 + Math.max(a.size(),b.size()));
 	}
 
 	private double getCommentRelation(List<String> a, List<String> b){

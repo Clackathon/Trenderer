@@ -32,18 +32,19 @@ public class Image {
 	private List<String> cloudVisionTags;
 	private List<User> likers;
 	private List<String> comments;
+	private String encodedThumbnail;
 	private ImageData standardResolution;
 	private User uploader;
 	private LocalDateTime creationTime;
 	private Location location;
 	private Set<Long> linkifiedImages = new HashSet<>();
-	private String encodedThumbnail;
 
 	private static final int THUMBNAIL_DIMENSION = 256;
 
 	public void setStandardResolution(ImageData data) {
-		encodedThumbnail = Base64.getEncoder().encodeToString(imageBytes(data.getThumbnail()));
 		standardResolution = data;
+		if (encodedThumbnail == null)
+			encodedThumbnail = Base64.getEncoder().encodeToString(imageBytes(data.createThumbnail()));
 	}
 
 	@SneakyThrows
@@ -65,7 +66,7 @@ public class Image {
 			return ImageCache.INSTANCE.downloadImage(imageLocation, uniqueId);
 		}
 
-		public BufferedImage getThumbnail() {
+		public BufferedImage createThumbnail() {
 			val standard = download();
 			int height = standard.getHeight();
 			int width = standard.getWidth();

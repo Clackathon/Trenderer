@@ -27,7 +27,7 @@ public class Linkifier {
 
 		double relativity = relation.relativity(a, b);
 
-		if (relativity < 0.19)
+		if (relativity < 0.25)
 			return;
 		// link with relatives
 
