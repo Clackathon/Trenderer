@@ -6,9 +6,11 @@ import lombok.SneakyThrows;
 import lombok.val;
 import org.jinstagram.Instagram;
 import org.jinstagram.auth.InstagramAuthService;
+import org.jinstagram.auth.model.Token;
 import org.jinstagram.auth.model.Verifier;
 
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.util.List;
 import java.util.Properties;
 import java.util.Scanner;
@@ -16,14 +18,16 @@ import java.util.Scanner;
 public class InstagramImageProvider implements ImageProvider {
 	final Properties apiProperties = loadProperties();
 	private Instagram instagram = getInstagramAuthService();
+	private static String instagramConf = "./secrets/instagram.conf";
 
 	@SneakyThrows
 	private Properties loadProperties() {
 		val p = new Properties();
-		p.load(new FileInputStream("./secrets/instagram.conf"));
+		p.load(new FileInputStream(instagramConf));
 		return p;
 	}
 
+	@SneakyThrows
 	private Instagram getInstagramAuthService() {
 		val service =  new InstagramAuthService()
 			.apiKey(apiProperties.getProperty("INSTAGRAM_KEY"))
@@ -31,15 +35,36 @@ public class InstagramImageProvider implements ImageProvider {
 			.callback("http://localhost/")
 			.build();
 
-		String authorizationUrl = service.getAuthorizationUrl();
+		String tokenSecret = apiProperties.getProperty("INSTAGRAM_TOKEN_SECRET");
+		String tokenToken = apiProperties.getProperty("INSTAGRAM_TOKEN_TOKEN");
+		Token token;
 
-		System.out.println("Visit " + authorizationUrl);
-		System.out.println("Enter verifier code: ");
+		if (tokenSecret == null || tokenToken == null) {
+			token = new Token(tokenToken, tokenSecret);
+		} else {
+			String authorizationUrl = service.getAuthorizationUrl();
 
-		String verifierCode = new Scanner(System.in).next();
+			System.out.println("Visit " + authorizationUrl);
+			System.out.println("Enter verifier code: ");
 
-		val verifier = new Verifier(verifierCode);
-		return new Instagram(service.getAccessToken(verifier));
+			String verifierCode = new Scanner(System.in).next();
+
+			val verifier = new Verifier(verifierCode);
+			token = service.getAccessToken(verifier);
+
+			apiProperties.put("INSTAGRAM_TOKEN_SECRET", token.getSecret());
+			apiProperties.put("INSTAGRAM_TOKEN_TOKEN", token.getToken());
+			apiProperties.store(new FileOutputStream(instagramConf), "added token");
+		}
+
+		return new Instagram(token);
+	}
+
+	/**
+	 * Sets up verifier token for first use
+	 */
+	public static void main(String[] args) {
+		new InstagramImageProvider().getInstagramAuthService();
 	}
 
 	@SneakyThrows
