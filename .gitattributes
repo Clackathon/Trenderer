@@ -35,6 +35,8 @@
 *.jar           binary
 *.jpg           binary
 *.jpeg          binary
+*.odg           binary
 *.png           binary
 *.so            binary
+*.ttf           binary
 *.war           binary
