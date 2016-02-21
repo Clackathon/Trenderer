@@ -24,6 +24,8 @@ dependencies {
 	compile 'com.google.api-client:google-api-client-assembly:1.21.0'
 	compile 'com.google.apis:google-api-services-vision:v1-rev6-1.21.0'
 	compile 'com.googlecode.flickrj-android:flickrj-android:2.1.0'
+	compile 'org.codehaus.jackson:jackson-core-lgpl:1.9.13'
+	compile 'org.codehaus.jackson:jackson-mapper-lgpl:1.9.13'
 	compile 'org.slf4j:slf4j-simple:1.7.16'
 	hidden 'org.jetbrains:annotations:15.0'
 	hidden 'org.projectlombok:lombok:1.16.4'
@@ -39,7 +41,7 @@ tasks.withType(JavaCompile) {
 	options.with {
 		encoding = 'UTF-8'
 		compilerArgs <<
-			"-Xlint:all" <<
+			"-Xlint:all" <<0
 			"-Xlint:-path" <<
 			"-Xlint:-rawtypes" <<
 			"-Xlint:-processing"
