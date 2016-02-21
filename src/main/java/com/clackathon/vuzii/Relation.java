@@ -3,6 +3,9 @@ package com.clackathon.vuzii;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Set;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * @author Euan
@@ -10,7 +13,7 @@ import java.util.List;
 public class Relation {
 
 
-
+	private static final Pattern hashtagPattern = Pattern.compile("#[a-zA-Z0-9]*");
 
 	public double relativity(Image a, Image b){
 		List<Double> percentages = new ArrayList<>();
@@ -19,7 +22,9 @@ public class Relation {
 		percentages.add(getUploaderRelation(a.getUploader(), b.getUploader()));
 		// percentages.add(getCreationTimeRelation(a.getCreationTime(), b.getCreationTime()));
 		percentages.add(getLocationRelation(a.getLocation(), b.getLocation()));
+		percentages.add(getLocationRelation(a.getLocation(), b.getLocation()));
 		percentages.add(getCommentsRelation(a.getComments(), b.getComments()));
+		percentages.add(getCommentRelation(a.getComments(), b.getComments()));
 
 
 
@@ -59,9 +64,35 @@ public class Relation {
 
 	private double getTagRelation(List<String> a, List<String> b) {
 		List<String> intersection = new ArrayList<>(a);
+		if(a.isEmpty() && b.isEmpty()){
+			return 0.2; // cause reasons
+		}
 		intersection.retainAll(b);
 		return ((double) intersection.size())/Math.max(a.size(),b.size());
 	}
+
+	private double getCommentRelation(List<String> a, List<String> b){
+		List<String> aTags = new ArrayList<>();
+		List<String> bTags = new ArrayList<>();
+
+		for (String s : a) {
+			aTags.addAll(hashtags(s));
+		}
+		for (String s : b) {
+			bTags.addAll(hashtags(s));
+		}
+		return getTagRelation(aTags, bTags);
+	}
+
+	private List<String> hashtags(String comment) {
+		Matcher m = hashtagPattern.matcher(comment);
+		List<String> hashtags = new ArrayList<>();
+		while (m.find()) {
+			hashtags.add(m.group());
+		}
+		return hashtags;
+	}
+
 
 	private static double calculateAverage(List<Double> values) {
 		double sum = 0;
