@@ -26,14 +26,16 @@
 
 		for (var key in data) {
 			var x = data[key];
-			nodeArray.push({id: x.mediaId, label: x.mediaId});
-			console.log(x);
+			nodeArray.push({id: x.mediaId, label: x.label});
 			var linked = x.linkifiedImages;
-			console.log(linked);
 			for (var i = 0; i < linked.length; i++) {
-				linkArray.push({from: x.id, to: linked[i]});
+				linkArray.push({from: x.mediaId, to: linked[i]});
 			}
 		}
+
+		console.log("Results:");
+		console.log(nodeArray);
+		console.log(linkArray);
 
 		var nodes = new vis.DataSet(nodeArray);
 
