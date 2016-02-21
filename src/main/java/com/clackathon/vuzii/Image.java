@@ -13,9 +13,9 @@ import java.net.URL;
 import java.nio.file.Path;
 import java.time.LocalDateTime;
 import java.util.Base64;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
+import java.util.Map;
+import java.util.TreeMap;
 import java.util.concurrent.atomic.AtomicLong;
 
 /**
@@ -37,7 +37,7 @@ public class Image {
 	private User uploader;
 	private LocalDateTime creationTime;
 	private Location location;
-	private Set<Long> linkifiedImages = new HashSet<>();
+	private Map<Long, Double> linkifiedImages = new TreeMap<>();
 
 	private static final int THUMBNAIL_DIMENSION = 256;
 
