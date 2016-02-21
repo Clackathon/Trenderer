@@ -19,7 +19,7 @@ public class Relation {
 		percentages.add(getTagRelation(a.getCloudVisionTags(), b.getCloudVisionTags()));
 //		percentages.add(getTagRelation(a.getUserTags(), b.getUserTags()));
 //		percentages.add(getUploaderRelation(a.getUploader(), b.getUploader()));
-//		// percentages.add(getCreationTimeRelation(a.getCreationTime(), b.getCreationTime()));
+//		percentages.add(getCreationTimeRelation(a.getCreationTime(), b.getCreationTime()));
 //		percentages.add(getLocationRelation(a.getLocation(), b.getLocation()));
 //		percentages.add(getLocationRelation(a.getLocation(), b.getLocation()));
 //		percentages.add(getCommentsRelation(a.getComments(), b.getComments()));
