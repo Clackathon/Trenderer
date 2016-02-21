@@ -43,7 +43,7 @@ public class FlatFileImageProvider implements ImageProvider {
 	}
 
 	private final String[] tags = new String[] {
-		"chair", "sofa", "dining table", "fireplace", "cabinet", "bed", "chest of drawers", "light", "lamp", "banana", "bath", "shower", "sync", "cooker", "cupboard"
+		"chair", "sofa", "dining table", "fireplace", "cabinet", "bed", "chest of drawers", "light", "lamp", "banana", "bath", "shower", "sink", "cooker", "cupboard"
 	};
 
 	private List<String> generateTags() {
