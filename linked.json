@@ -1,0 +1,736 @@
+[ {
+  "mediaId" : "57c1f50237cd0efd6e4fc67fbb9b316f.jpeg",
+  "userTags" : [ "sofa", "fireplace", "banana", "chair", "bed", "shower", "light", "dining table", "cooker", "lamp", "cabinet" ],
+  "cloudVisionTags" : [ "fireplace", "hearth", "room", "major appliance" ],
+  "likers" : null,
+  "comments" : [ "#NaNNaNNaNNaNBatman #wat #NaNNaNNaNNaNBatman #derp", "#awesome #wat #NaNNaNNaNNaNBatman #wat #NaNNaNNaNNaNBatman #awesome #NaNNaNNaNNaNBatman #NaNNaNNaNNaNBatman #awesome", "#NaNNaNNaNNaNBatman #NaNNaNNaNNaNBatman #lol #lol #lol #derp #NaNNaNNaNNaNBatman #wat #derp #derp #NaNNaNNaNNaNBatman #awesome" ],
+  "standardResolution" : {
+    "uniqueId" : "57c1f50237cd0efd6e4fc67fbb9b316f.jpeg",
+    "imageLocation" : "file:/Users/ross/IdeaProjects/Vuzii/./src/test/resources/google/57c1f50237cd0efd6e4fc67fbb9b316f.jpeg"
+  },
+  "uploader" : {
+    "id" : 1271920492,
+    "name" : "octo-wat"
+  },
+  "creationTime" : {
+    "hour" : 5,
+    "minute" : 57,
+    "second" : 36,
+    "nano" : 714000000,
+    "year" : 2016,
+    "month" : "FEBRUARY",
+    "dayOfMonth" : 21,
+    "dayOfWeek" : "SUNDAY",
+    "dayOfYear" : 52,
+    "monthValue" : 2,
+    "chronology" : {
+      "id" : "ISO",
+      "calendarType" : "iso8601"
+    }
+  },
+  "location" : {
+    "longitude" : 0.46951690583486005,
+    "latitude" : 0.6875754841261921
+  },
+  "linkifiedImages" : [ "c4jt321.png", "20160220_204157.jpg", "20160220_204212.jpg", "bathroom.jpg", "20160202_164716.jpg", "sofa_large_cluttered_cupboard.jpg", "table_and_chairs.jpg", "large_tv_part_of_table.jpg", "THE-AMAZING-WORLD-OF-M.-C-009.jpg", "single_cabinet.jpg", "20160220_204205.jpg", "20160220_204150.jpg" ]
+}, {
+  "mediaId" : "bathroom.jpg",
+  "userTags" : [ "chest of drawers", "cooker" ],
+  "cloudVisionTags" : [ "bathroom", "room", "interior design", "flooring", "floor", "house", "architecture", "swimming pool", "home" ],
+  "likers" : null,
+  "comments" : [ "#wat #derp #awesome #derp #NaNNaNNaNNaNBatman #derp #wat", "#lol #NaNNaNNaNNaNBatman #wat #lol #wat #wat #NaNNaNNaNNaNBatman #wat #derp #derp #lol #lol #derp", "#wat #wat #derp #lol #awesome #awesome #NaNNaNNaNNaNBatman", "#NaNNaNNaNNaNBatman #lol #awesome #NaNNaNNaNNaNBatman #awesome #lol #wat" ],
+  "standardResolution" : {
+    "uniqueId" : "bathroom.jpg",
+    "imageLocation" : "file:/Users/ross/IdeaProjects/Vuzii/./src/test/resources/google/bathroom.jpg"
+  },
+  "uploader" : {
+    "id" : 139974966,
+    "name" : "ken-ross"
+  },
+  "creationTime" : {
+    "hour" : 5,
+    "minute" : 57,
+    "second" : 37,
+    "nano" : 174000000,
+    "year" : 2016,
+    "month" : "FEBRUARY",
+    "dayOfMonth" : 21,
+    "dayOfWeek" : "SUNDAY",
+    "dayOfYear" : 52,
+    "monthValue" : 2,
+    "chronology" : {
+      "id" : "ISO",
+      "calendarType" : "iso8601"
+    }
+  },
+  "location" : {
+    "longitude" : 0.1979711659808483,
+    "latitude" : 0.958774835650951
+  },
+  "linkifiedImages" : [ "20160220_204157.jpg", "57c1f50237cd0efd6e4fc67fbb9b316f.jpeg", "sofa_large_cluttered_cupboard.jpg", "THE-AMAZING-WORLD-OF-M.-C-009.jpg", "20160220_204205.jpg" ]
+}, {
+  "mediaId" : "chair.jpg",
+  "userTags" : [ "fireplace" ],
+  "cloudVisionTags" : [ "furniture", "chair", "black", "human positions", "couch", "leather", "home" ],
+  "likers" : null,
+  "comments" : [ ],
+  "standardResolution" : {
+    "uniqueId" : "chair.jpg",
+    "imageLocation" : "file:/Users/ross/IdeaProjects/Vuzii/./src/test/resources/google/chair.jpg"
+  },
+  "uploader" : {
+    "id" : -725993990,
+    "name" : "euan-wat"
+  },
+  "creationTime" : {
+    "hour" : 5,
+    "minute" : 57,
+    "second" : 37,
+    "nano" : 176000000,
+    "year" : 2016,
+    "month" : "FEBRUARY",
+    "dayOfMonth" : 21,
+    "dayOfWeek" : "SUNDAY",
+    "dayOfYear" : 52,
+    "monthValue" : 2,
+    "chronology" : {
+      "id" : "ISO",
+      "calendarType" : "iso8601"
+    }
+  },
+  "location" : {
+    "longitude" : 0.6258961333733752,
+    "latitude" : 0.25635907732370045
+  },
+  "linkifiedImages" : [ "c4jt321.png", "download.jpeg", "chair_table_odd_angle.jpg", "dim_room.jpg", "20160220_204212.jpg", "Fiat_Grande_Punto_20090906_front.JPG", "20160220_204524.jpg", "THE-AMAZING-WORLD-OF-M.-C-009.jpg", "single_cabinet.jpg" ]
+}, {
+  "mediaId" : "chair_table_odd_angle.jpg",
+  "userTags" : [ "cupboard", "fireplace", "light" ],
+  "cloudVisionTags" : [ "table", "black", "furniture", "white", "room", "floor", "flooring", "coffee table", "branch" ],
+  "likers" : null,
+  "comments" : [ ],
+  "standardResolution" : {
+    "uniqueId" : "chair_table_odd_angle.jpg",
+    "imageLocation" : "file:/Users/ross/IdeaProjects/Vuzii/./src/test/resources/google/chair_table_odd_angle.jpg"
+  },
+  "uploader" : {
+    "id" : 664710045,
+    "name" : "bearded-cameron"
+  },
+  "creationTime" : {
+    "hour" : 5,
+    "minute" : 57,
+    "second" : 37,
+    "nano" : 177000000,
+    "year" : 2016,
+    "month" : "FEBRUARY",
+    "dayOfMonth" : 21,
+    "dayOfWeek" : "SUNDAY",
+    "dayOfYear" : 52,
+    "monthValue" : 2,
+    "chronology" : {
+      "id" : "ISO",
+      "calendarType" : "iso8601"
+    }
+  },
+  "location" : {
+    "longitude" : 0.04126561659350758,
+    "latitude" : 0.6537517645711393
+  },
+  "linkifiedImages" : [ "download.jpeg", "dim_room.jpg", "20160220_204212.jpg", "Fiat_Grande_Punto_20090906_front.JPG", "THE-AMAZING-WORLD-OF-M.-C-009.jpg", "chair.jpg" ]
+}, {
+  "mediaId" : "dim_room.jpg",
+  "userTags" : [ "shower", "chest of drawers", "light", "lamp", "fireplace", "banana", "dining table", "cupboard", "sink" ],
+  "cloudVisionTags" : [ "room", "flooring" ],
+  "likers" : null,
+  "comments" : [ ],
+  "standardResolution" : {
+    "uniqueId" : "dim_room.jpg",
+    "imageLocation" : "file:/Users/ross/IdeaProjects/Vuzii/./src/test/resources/google/dim_room.jpg"
+  },
+  "uploader" : {
+    "id" : -725993990,
+    "name" : "euan-wat"
+  },
+  "creationTime" : {
+    "hour" : 5,
+    "minute" : 57,
+    "second" : 37,
+    "nano" : 178000000,
+    "year" : 2016,
+    "month" : "FEBRUARY",
+    "dayOfMonth" : 21,
+    "dayOfWeek" : "SUNDAY",
+    "dayOfYear" : 52,
+    "monthValue" : 2,
+    "chronology" : {
+      "id" : "ISO",
+      "calendarType" : "iso8601"
+    }
+  },
+  "location" : {
+    "longitude" : 0.7799823816461436,
+    "latitude" : 0.5180092924838592
+  },
+  "linkifiedImages" : [ "c4jt321.png", "download.jpeg", "chair_table_odd_angle.jpg", "20160220_204212.jpg", "Fiat_Grande_Punto_20090906_front.JPG", "20160202_164716.jpg", "large_tv_part_of_table.jpg", "THE-AMAZING-WORLD-OF-M.-C-009.jpg", "chair.jpg", "single_cabinet.jpg", "20160220_204150.jpg" ]
+}, {
+  "mediaId" : "IMG_0675-1080x1080.jpg",
+  "userTags" : [ "cooker", "cabinet" ],
+  "cloudVisionTags" : [ "living room", "room", "interior design", "furniture", "shore", "flooring", "floor", "condominium" ],
+  "likers" : null,
+  "comments" : [ "#wat #lol #awesome #derp #wat #wat #awesome" ],
+  "standardResolution" : {
+    "uniqueId" : "IMG_0675-1080x1080.jpg",
+    "imageLocation" : "file:/Users/ross/IdeaProjects/Vuzii/./src/test/resources/google/IMG_0675-1080x1080.jpg"
+  },
+  "uploader" : {
+    "id" : 1722203789,
+    "name" : "bearded-octo"
+  },
+  "creationTime" : {
+    "hour" : 5,
+    "minute" : 57,
+    "second" : 37,
+    "nano" : 180000000,
+    "year" : 2016,
+    "month" : "FEBRUARY",
+    "dayOfMonth" : 21,
+    "dayOfWeek" : "SUNDAY",
+    "dayOfYear" : 52,
+    "monthValue" : 2,
+    "chronology" : {
+      "id" : "ISO",
+      "calendarType" : "iso8601"
+    }
+  },
+  "location" : {
+    "longitude" : 0.7205531717437064,
+    "latitude" : 0.925100041196673
+  },
+  "linkifiedImages" : [ "20160206_132717.jpg", "20160202_164716.jpg", "table_and_chairs.jpg", "large_tv_part_of_table.jpg", "20160220_204150.jpg" ]
+}, {
+  "mediaId" : "large_tv_part_of_table.jpg",
+  "userTags" : [ "bed", "bath", "cabinet", "lamp", "chair", "fireplace" ],
+  "cloudVisionTags" : [ "white", "furniture", "room", "chest of drawers", "sideboard", "flooring", "floor" ],
+  "likers" : null,
+  "comments" : [ "#derp #awesome #derp #lol #wat #awesome #awesome #awesome #derp #lol #awesome" ],
+  "standardResolution" : {
+    "uniqueId" : "large_tv_part_of_table.jpg",
+    "imageLocation" : "file:/Users/ross/IdeaProjects/Vuzii/./src/test/resources/google/large_tv_part_of_table.jpg"
+  },
+  "uploader" : {
+    "id" : -826775717,
+    "name" : "ken-ken"
+  },
+  "creationTime" : {
+    "hour" : 5,
+    "minute" : 57,
+    "second" : 37,
+    "nano" : 183000000,
+    "year" : 2016,
+    "month" : "FEBRUARY",
+    "dayOfMonth" : 21,
+    "dayOfWeek" : "SUNDAY",
+    "dayOfYear" : 52,
+    "monthValue" : 2,
+    "chronology" : {
+      "id" : "ISO",
+      "calendarType" : "iso8601"
+    }
+  },
+  "location" : {
+    "longitude" : 0.7420808627257737,
+    "latitude" : 0.5873285450063984
+  },
+  "linkifiedImages" : [ "c4jt321.png", "57c1f50237cd0efd6e4fc67fbb9b316f.jpeg", "dim_room.jpg", "20160202_164716.jpg", "table_and_chairs.jpg", "IMG_0675-1080x1080.jpg", "single_cabinet.jpg", "20160220_204150.jpg" ]
+}, {
+  "mediaId" : "single_cabinet.jpg",
+  "userTags" : [ "dining table", "sofa", "cupboard", "cabinet", "lamp", "banana", "chair", "fireplace", "light", "sink" ],
+  "cloudVisionTags" : [ "furniture", "sideboard", "chest of drawers", "nightstand", "filing cabinet", "product", "china cabinet", "changing table" ],
+  "likers" : null,
+  "comments" : [ "", "#NaNNaNNaNNaNBatman #NaNNaNNaNNaNBatman #NaNNaNNaNNaNBatman #NaNNaNNaNNaNBatman #awesome #awesome #NaNNaNNaNNaNBatman #NaNNaNNaNNaNBatman #NaNNaNNaNNaNBatman #derp #awesome", "#lol #lol #lol #wat #lol #wat #lol #awesome #derp #derp #derp #wat #lol", "" ],
+  "standardResolution" : {
+    "uniqueId" : "single_cabinet.jpg",
+    "imageLocation" : "file:/Users/ross/IdeaProjects/Vuzii/./src/test/resources/google/single_cabinet.jpg"
+  },
+  "uploader" : {
+    "id" : 1722313714,
+    "name" : "bearded-ryan"
+  },
+  "creationTime" : {
+    "hour" : 5,
+    "minute" : 57,
+    "second" : 37,
+    "nano" : 184000000,
+    "year" : 2016,
+    "month" : "FEBRUARY",
+    "dayOfMonth" : 21,
+    "dayOfWeek" : "SUNDAY",
+    "dayOfYear" : 52,
+    "monthValue" : 2,
+    "chronology" : {
+      "id" : "ISO",
+      "calendarType" : "iso8601"
+    }
+  },
+  "location" : {
+    "longitude" : 0.66497761226601,
+    "latitude" : 0.33407408884596856
+  },
+  "linkifiedImages" : [ "c4jt321.png", "download.jpeg", "57c1f50237cd0efd6e4fc67fbb9b316f.jpeg", "dim_room.jpg", "20160220_204212.jpg", "20160202_164716.jpg", "20160220_204524.jpg", "large_tv_part_of_table.jpg", "chair.jpg", "20160220_204150.jpg" ]
+}, {
+  "mediaId" : "sofa_large_cluttered_cupboard.jpg",
+  "userTags" : [ "cabinet", "bath", "fireplace" ],
+  "cloudVisionTags" : [ "furniture", "painting", "modern art", "interior design", "wallpaper" ],
+  "likers" : null,
+  "comments" : [ "#derp #lol #awesome #awesome #derp #wat", "#NaNNaNNaNNaNBatman #wat #wat #derp #wat #NaNNaNNaNNaNBatman #wat #wat #wat" ],
+  "standardResolution" : {
+    "uniqueId" : "sofa_large_cluttered_cupboard.jpg",
+    "imageLocation" : "file:/Users/ross/IdeaProjects/Vuzii/./src/test/resources/google/sofa_large_cluttered_cupboard.jpg"
+  },
+  "uploader" : {
+    "id" : 495589984,
+    "name" : "wat-ross"
+  },
+  "creationTime" : {
+    "hour" : 5,
+    "minute" : 57,
+    "second" : 37,
+    "nano" : 186000000,
+    "year" : 2016,
+    "month" : "FEBRUARY",
+    "dayOfMonth" : 21,
+    "dayOfWeek" : "SUNDAY",
+    "dayOfYear" : 52,
+    "monthValue" : 2,
+    "chronology" : {
+      "id" : "ISO",
+      "calendarType" : "iso8601"
+    }
+  },
+  "location" : {
+    "longitude" : 0.24763369374852118,
+    "latitude" : 0.994178515684891
+  },
+  "linkifiedImages" : [ "20160220_204157.jpg", "57c1f50237cd0efd6e4fc67fbb9b316f.jpeg", "20160220_204212.jpg", "bathroom.jpg", "THE-AMAZING-WORLD-OF-M.-C-009.jpg", "20160220_204205.jpg" ]
+}, {
+  "mediaId" : "table_and_chairs.jpg",
+  "userTags" : [ "bed" ],
+  "cloudVisionTags" : [ "white", "room", "interior design", "dining room", "house", "architecture" ],
+  "likers" : null,
+  "comments" : [ "#wat #wat #lol #wat #derp #awesome #awesome", "#derp #awesome #derp #wat #wat #lol #lol #awesome #NaNNaNNaNNaNBatman" ],
+  "standardResolution" : {
+    "uniqueId" : "table_and_chairs.jpg",
+    "imageLocation" : "file:/Users/ross/IdeaProjects/Vuzii/./src/test/resources/google/table_and_chairs.jpg"
+  },
+  "uploader" : {
+    "id" : 74459163,
+    "name" : "mason-wat"
+  },
+  "creationTime" : {
+    "hour" : 5,
+    "minute" : 57,
+    "second" : 37,
+    "nano" : 188000000,
+    "year" : 2016,
+    "month" : "FEBRUARY",
+    "dayOfMonth" : 21,
+    "dayOfWeek" : "SUNDAY",
+    "dayOfYear" : 52,
+    "monthValue" : 2,
+    "chronology" : {
+      "id" : "ISO",
+      "calendarType" : "iso8601"
+    }
+  },
+  "location" : {
+    "longitude" : 0.6301836792974466,
+    "latitude" : 0.8407054083154273
+  },
+  "linkifiedImages" : [ "20160206_132717.jpg", "20160220_204157.jpg", "57c1f50237cd0efd6e4fc67fbb9b316f.jpeg", "20160220_204212.jpg", "20160202_164716.jpg", "IMG_0675-1080x1080.jpg", "large_tv_part_of_table.jpg", "20160220_204150.jpg", "20160220_204205.jpg" ]
+}, {
+  "mediaId" : "c4jt321.png",
+  "userTags" : [ "sofa", "dining table", "bed", "shower", "light", "cupboard", "chair", "fireplace", "sink" ],
+  "cloudVisionTags" : [ "cartoon", "comics", "artwork" ],
+  "likers" : null,
+  "comments" : [ "#NaNNaNNaNNaNBatman #derp #NaNNaNNaNNaNBatman #NaNNaNNaNNaNBatman #NaNNaNNaNNaNBatman #NaNNaNNaNNaNBatman #NaNNaNNaNNaNBatman #wat #awesome #wat #NaNNaNNaNNaNBatman #NaNNaNNaNNaNBatman #derp #lol" ],
+  "standardResolution" : {
+    "uniqueId" : "c4jt321.png",
+    "imageLocation" : "file:/Users/ross/IdeaProjects/Vuzii/./src/test/resources/lol/c4jt321.png"
+  },
+  "uploader" : {
+    "id" : 1846802432,
+    "name" : "bearded-mason"
+  },
+  "creationTime" : {
+    "hour" : 5,
+    "minute" : 57,
+    "second" : 37,
+    "nano" : 190000000,
+    "year" : 2016,
+    "month" : "FEBRUARY",
+    "dayOfMonth" : 21,
+    "dayOfWeek" : "SUNDAY",
+    "dayOfYear" : 52,
+    "monthValue" : 2,
+    "chronology" : {
+      "id" : "ISO",
+      "calendarType" : "iso8601"
+    }
+  },
+  "location" : {
+    "longitude" : 0.5905426112972029,
+    "latitude" : 0.39670840380437977
+  },
+  "linkifiedImages" : [ "57c1f50237cd0efd6e4fc67fbb9b316f.jpeg", "dim_room.jpg", "20160202_164716.jpg", "20160220_204524.jpg", "large_tv_part_of_table.jpg", "chair.jpg", "single_cabinet.jpg", "20160220_204150.jpg", "20160220_204205.jpg" ]
+}, {
+  "mediaId" : "download.jpeg",
+  "userTags" : [ ],
+  "cloudVisionTags" : [ "ford focus", "vehicle", "automobile", "mode of transport", "group b", "coupé", "sedan", "world rally championship", "ford focus rs wrc", "auto racing" ],
+  "likers" : null,
+  "comments" : [ ],
+  "standardResolution" : {
+    "uniqueId" : "download.jpeg",
+    "imageLocation" : "file:/Users/ross/IdeaProjects/Vuzii/./src/test/resources/lol/download.jpeg"
+  },
+  "uploader" : {
+    "id" : -1031103580,
+    "name" : "euan-ryan"
+  },
+  "creationTime" : {
+    "hour" : 5,
+    "minute" : 57,
+    "second" : 37,
+    "nano" : 191000000,
+    "year" : 2016,
+    "month" : "FEBRUARY",
+    "dayOfMonth" : 21,
+    "dayOfWeek" : "SUNDAY",
+    "dayOfYear" : 52,
+    "monthValue" : 2,
+    "chronology" : {
+      "id" : "ISO",
+      "calendarType" : "iso8601"
+    }
+  },
+  "location" : {
+    "longitude" : 0.8265642882372776,
+    "latitude" : 0.2254182478258564
+  },
+  "linkifiedImages" : [ "chair_table_odd_angle.jpg", "dim_room.jpg", "20160220_204212.jpg", "Fiat_Grande_Punto_20090906_front.JPG", "20160220_204524.jpg", "THE-AMAZING-WORLD-OF-M.-C-009.jpg", "chair.jpg", "single_cabinet.jpg" ]
+}, {
+  "mediaId" : "Fiat_Grande_Punto_20090906_front.JPG",
+  "userTags" : [ "chest of drawers", "cabinet", "fireplace", "banana", "dining table", "cooker", "sofa", "bed" ],
+  "cloudVisionTags" : [ "third generation fiat punto", "vehicle", "automobile", "alloy wheel", "mode of transport", "land vehicle" ],
+  "likers" : null,
+  "comments" : [ ],
+  "standardResolution" : {
+    "uniqueId" : "Fiat_Grande_Punto_20090906_front.JPG",
+    "imageLocation" : "file:/Users/ross/IdeaProjects/Vuzii/./src/test/resources/lol/Fiat_Grande_Punto_20090906_front.JPG"
+  },
+  "uploader" : {
+    "id" : 495207904,
+    "name" : "wat-euan"
+  },
+  "creationTime" : {
+    "hour" : 5,
+    "minute" : 57,
+    "second" : 37,
+    "nano" : 192000000,
+    "year" : 2016,
+    "month" : "FEBRUARY",
+    "dayOfMonth" : 21,
+    "dayOfWeek" : "SUNDAY",
+    "dayOfYear" : 52,
+    "monthValue" : 2,
+    "chronology" : {
+      "id" : "ISO",
+      "calendarType" : "iso8601"
+    }
+  },
+  "location" : {
+    "longitude" : 0.9316128107756494,
+    "latitude" : 0.08602165066126277
+  },
+  "linkifiedImages" : [ "download.jpeg", "chair_table_odd_angle.jpg", "dim_room.jpg", "20160220_204212.jpg", "20160220_204524.jpg", "THE-AMAZING-WORLD-OF-M.-C-009.jpg", "chair.jpg" ]
+}, {
+  "mediaId" : "THE-AMAZING-WORLD-OF-M.-C-009.jpg",
+  "userTags" : [ "fireplace", "light", "cupboard", "cabinet", "sink", "chair", "cooker", "chest of drawers", "bed", "sofa", "dining table" ],
+  "cloudVisionTags" : [ "chess", "toy", "illustration" ],
+  "likers" : null,
+  "comments" : [ ],
+  "standardResolution" : {
+    "uniqueId" : "THE-AMAZING-WORLD-OF-M.-C-009.jpg",
+    "imageLocation" : "file:/Users/ross/IdeaProjects/Vuzii/./src/test/resources/lol/THE-AMAZING-WORLD-OF-M.-C-009.jpg"
+  },
+  "uploader" : {
+    "id" : 67914878,
+    "name" : "ross-nemesis"
+  },
+  "creationTime" : {
+    "hour" : 5,
+    "minute" : 57,
+    "second" : 37,
+    "nano" : 193000000,
+    "year" : 2016,
+    "month" : "FEBRUARY",
+    "dayOfMonth" : 21,
+    "dayOfWeek" : "SUNDAY",
+    "dayOfYear" : 52,
+    "monthValue" : 2,
+    "chronology" : {
+      "id" : "ISO",
+      "calendarType" : "iso8601"
+    }
+  },
+  "location" : {
+    "longitude" : 0.35989882011025565,
+    "latitude" : 0.8762461248306624
+  },
+  "linkifiedImages" : [ "download.jpeg", "20160220_204157.jpg", "57c1f50237cd0efd6e4fc67fbb9b316f.jpeg", "chair_table_odd_angle.jpg", "dim_room.jpg", "20160220_204212.jpg", "bathroom.jpg", "Fiat_Grande_Punto_20090906_front.JPG", "sofa_large_cluttered_cupboard.jpg", "chair.jpg", "20160220_204205.jpg" ]
+}, {
+  "mediaId" : "20160202_164716.jpg",
+  "userTags" : [ ],
+  "cloudVisionTags" : [ "writing" ],
+  "likers" : null,
+  "comments" : [ "#lol #lol #NaNNaNNaNNaNBatman #derp #derp #derp #awesome #awesome", "#derp #lol #awesome #NaNNaNNaNNaNBatman" ],
+  "standardResolution" : {
+    "uniqueId" : "20160202_164716.jpg",
+    "imageLocation" : "file:/Users/ross/IdeaProjects/Vuzii/./src/test/resources/ryan/20160202_164716.jpg"
+  },
+  "uploader" : {
+    "id" : -1302915533,
+    "name" : "nemesis-ryan"
+  },
+  "creationTime" : {
+    "hour" : 5,
+    "minute" : 57,
+    "second" : 37,
+    "nano" : 195000000,
+    "year" : 2016,
+    "month" : "FEBRUARY",
+    "dayOfMonth" : 21,
+    "dayOfWeek" : "SUNDAY",
+    "dayOfYear" : 52,
+    "monthValue" : 2,
+    "chronology" : {
+      "id" : "ISO",
+      "calendarType" : "iso8601"
+    }
+  },
+  "location" : {
+    "longitude" : 0.7150904267050416,
+    "latitude" : 0.6544455345221657
+  },
+  "linkifiedImages" : [ "20160206_132717.jpg", "c4jt321.png", "57c1f50237cd0efd6e4fc67fbb9b316f.jpeg", "dim_room.jpg", "table_and_chairs.jpg", "IMG_0675-1080x1080.jpg", "large_tv_part_of_table.jpg", "single_cabinet.jpg", "20160220_204150.jpg" ]
+}, {
+  "mediaId" : "20160206_132717.jpg",
+  "userTags" : [ "chest of drawers", "cupboard" ],
+  "cloudVisionTags" : [ "vehicle", "automobile", "third generation fiat punto", "mode of transport", "bumper", "sport utility vehicle", "wheel", "land vehicle", "sedan" ],
+  "likers" : null,
+  "comments" : [ "#wat #derp #wat #derp #derp #derp #NaNNaNNaNNaNBatman #NaNNaNNaNNaNBatman #lol #lol #NaNNaNNaNNaNBatman #NaNNaNNaNNaNBatman #awesome", "#awesome #lol #NaNNaNNaNNaNBatman #wat #wat #derp" ],
+  "standardResolution" : {
+    "uniqueId" : "20160206_132717.jpg",
+    "imageLocation" : "file:/Users/ross/IdeaProjects/Vuzii/./src/test/resources/ryan/20160206_132717.jpg"
+  },
+  "uploader" : {
+    "id" : -1302924580,
+    "name" : "nemesis-ross"
+  },
+  "creationTime" : {
+    "hour" : 5,
+    "minute" : 57,
+    "second" : 37,
+    "nano" : 195000000,
+    "year" : 2016,
+    "month" : "FEBRUARY",
+    "dayOfMonth" : 21,
+    "dayOfWeek" : "SUNDAY",
+    "dayOfYear" : 52,
+    "monthValue" : 2,
+    "chronology" : {
+      "id" : "ISO",
+      "calendarType" : "iso8601"
+    }
+  },
+  "location" : {
+    "longitude" : 0.914022830062783,
+    "latitude" : 0.9336657554569965
+  },
+  "linkifiedImages" : [ "20160202_164716.jpg", "table_and_chairs.jpg", "IMG_0675-1080x1080.jpg", "20160220_204150.jpg" ]
+}, {
+  "mediaId" : "20160220_204150.jpg",
+  "userTags" : [ "cooker", "sink", "bath", "light", "sofa", "chair", "cupboard", "chest of drawers", "dining table", "cabinet" ],
+  "cloudVisionTags" : [ "furniture", "vehicle" ],
+  "likers" : null,
+  "comments" : [ "#lol #lol #awesome #awesome #wat #awesome #wat #NaNNaNNaNNaNBatman #NaNNaNNaNNaNBatman #derp #derp #derp #lol #wat", "#lol #wat #derp #awesome #lol #lol", "#derp #derp #awesome #lol #wat #lol #wat #wat #derp #lol #wat #NaNNaNNaNNaNBatman #awesome", "#NaNNaNNaNNaNBatman #derp #NaNNaNNaNNaNBatman #NaNNaNNaNNaNBatman #derp #wat #awesome #awesome" ],
+  "standardResolution" : {
+    "uniqueId" : "20160220_204150.jpg",
+    "imageLocation" : "file:/Users/ross/IdeaProjects/Vuzii/./src/test/resources/ryan/20160220_204150.jpg"
+  },
+  "uploader" : {
+    "id" : 182646782,
+    "name" : "euan-nemesis"
+  },
+  "creationTime" : {
+    "hour" : 5,
+    "minute" : 57,
+    "second" : 37,
+    "nano" : 197000000,
+    "year" : 2016,
+    "month" : "FEBRUARY",
+    "dayOfMonth" : 21,
+    "dayOfWeek" : "SUNDAY",
+    "dayOfYear" : 52,
+    "monthValue" : 2,
+    "chronology" : {
+      "id" : "ISO",
+      "calendarType" : "iso8601"
+    }
+  },
+  "location" : {
+    "longitude" : 0.9626656482667691,
+    "latitude" : 0.7031121383885142
+  },
+  "linkifiedImages" : [ "20160206_132717.jpg", "c4jt321.png", "57c1f50237cd0efd6e4fc67fbb9b316f.jpeg", "dim_room.jpg", "20160202_164716.jpg", "table_and_chairs.jpg", "IMG_0675-1080x1080.jpg", "large_tv_part_of_table.jpg", "single_cabinet.jpg" ]
+}, {
+  "mediaId" : "20160220_204157.jpg",
+  "userTags" : [ "dining table", "cupboard", "bed", "sink" ],
+  "cloudVisionTags" : [ "costume" ],
+  "likers" : null,
+  "comments" : [ "#awesome #derp #derp #NaNNaNNaNNaNBatman", "#lol #lol #awesome #wat #NaNNaNNaNNaNBatman #derp" ],
+  "standardResolution" : {
+    "uniqueId" : "20160220_204157.jpg",
+    "imageLocation" : "file:/Users/ross/IdeaProjects/Vuzii/./src/test/resources/ryan/20160220_204157.jpg"
+  },
+  "uploader" : {
+    "id" : 774593293,
+    "name" : "octo-octo"
+  },
+  "creationTime" : {
+    "hour" : 5,
+    "minute" : 57,
+    "second" : 37,
+    "nano" : 198000000,
+    "year" : 2016,
+    "month" : "FEBRUARY",
+    "dayOfMonth" : 21,
+    "dayOfWeek" : "SUNDAY",
+    "dayOfYear" : 52,
+    "monthValue" : 2,
+    "chronology" : {
+      "id" : "ISO",
+      "calendarType" : "iso8601"
+    }
+  },
+  "location" : {
+    "longitude" : 0.35193866014243247,
+    "latitude" : 0.9243204344367149
+  },
+  "linkifiedImages" : [ "57c1f50237cd0efd6e4fc67fbb9b316f.jpeg", "20160220_204212.jpg", "bathroom.jpg", "sofa_large_cluttered_cupboard.jpg", "table_and_chairs.jpg", "THE-AMAZING-WORLD-OF-M.-C-009.jpg", "20160220_204205.jpg" ]
+}, {
+  "mediaId" : "20160220_204205.jpg",
+  "userTags" : [ "sink", "shower", "sofa", "cooker", "light", "bath", "chest of drawers", "cupboard", "bed" ],
+  "cloudVisionTags" : [ "interior design", "window covering", "siding", "roof" ],
+  "likers" : null,
+  "comments" : [ "#awesome #wat #derp #NaNNaNNaNNaNBatman #NaNNaNNaNNaNBatman", "#awesome #NaNNaNNaNNaNBatman #derp #awesome #wat #wat #NaNNaNNaNNaNBatman #derp #lol #lol #wat", "#NaNNaNNaNNaNBatman #NaNNaNNaNNaNBatman #wat #lol #wat #wat", "#wat #NaNNaNNaNNaNBatman #derp" ],
+  "standardResolution" : {
+    "uniqueId" : "20160220_204205.jpg",
+    "imageLocation" : "file:/Users/ross/IdeaProjects/Vuzii/./src/test/resources/ryan/20160220_204205.jpg"
+  },
+  "uploader" : {
+    "id" : -685998527,
+    "name" : "cameron-octo"
+  },
+  "creationTime" : {
+    "hour" : 5,
+    "minute" : 57,
+    "second" : 37,
+    "nano" : 199000000,
+    "year" : 2016,
+    "month" : "FEBRUARY",
+    "dayOfMonth" : 21,
+    "dayOfWeek" : "SUNDAY",
+    "dayOfYear" : 52,
+    "monthValue" : 2,
+    "chronology" : {
+      "id" : "ISO",
+      "calendarType" : "iso8601"
+    }
+  },
+  "location" : {
+    "longitude" : 0.27599281920461816,
+    "latitude" : 0.8413327953684878
+  },
+  "linkifiedImages" : [ "20160220_204157.jpg", "c4jt321.png", "57c1f50237cd0efd6e4fc67fbb9b316f.jpeg", "20160220_204212.jpg", "bathroom.jpg", "sofa_large_cluttered_cupboard.jpg", "table_and_chairs.jpg", "THE-AMAZING-WORLD-OF-M.-C-009.jpg" ]
+}, {
+  "mediaId" : "20160220_204212.jpg",
+  "userTags" : [ "cabinet", "light", "chair", "fireplace", "banana", "dining table", "sofa", "lamp", "sink", "cooker", "cupboard", "bed", "chest of drawers" ],
+  "cloudVisionTags" : [ "gadget", "mobile phone", "laptop", "beauty", "multimedia", "hand" ],
+  "likers" : null,
+  "comments" : [ ],
+  "standardResolution" : {
+    "uniqueId" : "20160220_204212.jpg",
+    "imageLocation" : "file:/Users/ross/IdeaProjects/Vuzii/./src/test/resources/ryan/20160220_204212.jpg"
+  },
+  "uploader" : {
+    "id" : 1722313714,
+    "name" : "bearded-ryan"
+  },
+  "creationTime" : {
+    "hour" : 5,
+    "minute" : 57,
+    "second" : 37,
+    "nano" : 200000000,
+    "year" : 2016,
+    "month" : "FEBRUARY",
+    "dayOfMonth" : 21,
+    "dayOfWeek" : "SUNDAY",
+    "dayOfYear" : 52,
+    "monthValue" : 2,
+    "chronology" : {
+      "id" : "ISO",
+      "calendarType" : "iso8601"
+    }
+  },
+  "location" : {
+    "longitude" : 0.45658018837432446,
+    "latitude" : 0.9165506310095866
+  },
+  "linkifiedImages" : [ "download.jpeg", "20160220_204157.jpg", "57c1f50237cd0efd6e4fc67fbb9b316f.jpeg", "chair_table_odd_angle.jpg", "dim_room.jpg", "Fiat_Grande_Punto_20090906_front.JPG", "sofa_large_cluttered_cupboard.jpg", "table_and_chairs.jpg", "THE-AMAZING-WORLD-OF-M.-C-009.jpg", "chair.jpg", "single_cabinet.jpg", "20160220_204205.jpg" ]
+}, {
+  "mediaId" : "20160220_204524.jpg",
+  "userTags" : [ "lamp" ],
+  "cloudVisionTags" : [ "room", "home", "furniture", "beauty", "multimedia" ],
+  "likers" : null,
+  "comments" : [ "#awesome #wat #derp #awesome #derp #wat #NaNNaNNaNNaNBatman #lol #derp #wat #wat #awesome" ],
+  "standardResolution" : {
+    "uniqueId" : "20160220_204524.jpg",
+    "imageLocation" : "file:/Users/ross/IdeaProjects/Vuzii/./src/test/resources/ryan/20160220_204524.jpg"
+  },
+  "uploader" : {
+    "id" : -54419996,
+    "name" : "ross-ken"
+  },
+  "creationTime" : {
+    "hour" : 5,
+    "minute" : 57,
+    "second" : 37,
+    "nano" : 201000000,
+    "year" : 2016,
+    "month" : "FEBRUARY",
+    "dayOfMonth" : 21,
+    "dayOfWeek" : "SUNDAY",
+    "dayOfYear" : 52,
+    "monthValue" : 2,
+    "chronology" : {
+      "id" : "ISO",
+      "calendarType" : "iso8601"
+    }
+  },
+  "location" : {
+    "longitude" : 0.7292163922080283,
+    "latitude" : 0.14529108998062967
+  },
+  "linkifiedImages" : [ "c4jt321.png", "download.jpeg", "Fiat_Grande_Punto_20090906_front.JPG", "chair.jpg", "single_cabinet.jpg" ]
+} ]
