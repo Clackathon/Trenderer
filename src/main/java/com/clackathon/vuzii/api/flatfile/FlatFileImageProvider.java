@@ -32,7 +32,8 @@ public class FlatFileImageProvider implements ImageProvider {
 		image.setLocation(generateLocation());
 		image.setCreationTime(LocalDateTime.now());
 		image.setMediaId(p.getFileName().toString());
-		image.setStandardResolution(new Image.ImageData(p.getFileName().toString(), p.toFile().toURI().toURL()));
+		image.setStandardResolution(new Image.ImageData(p.getFileName().toString(), p.toAbsolutePath().toUri().toURL()));
+		System.out.println("doing " + p + "->" + image.getStandardResolution());
 		image.setCloudVisionTags(CloudVision.INSTANCE.getLabels(image.getStandardResolution()));
 		image.setUserTags(generateTags());
 		image.setComments(generateComments());
