@@ -80,7 +80,7 @@ public class Image {
 			if (img instanceof BufferedImage)
 				return (BufferedImage) img;
 
-			// Create a buffered image with transparency
+			// Create a buffered image without transparency (must not use transparency for JPEGs)
 			BufferedImage bimage = new BufferedImage(img.getWidth(null), img.getHeight(null), BufferedImage.TYPE_INT_RGB);
 
 			// Draw the image on to the buffered image
