@@ -4,8 +4,9 @@
 	<title>Network basic demo</title>
 	<script src = "vis/dist/vis.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 	<link href = "vis/dist/vis.css" rel = "stylesheet" type = "text/css" />
-
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.css" rel="stylesheet" type="text/css"/>
 	<style type = "text/css">
 		#mynetwork {
 			position: absolute;
@@ -18,14 +19,15 @@
 </head>
 <body>
 <div id = "mynetwork"></div>
-
+<div id="dialog">placeholder content which will vanish</div>
 <script type = "text/javascript">
-	$.getJSON("./linked.json", function (data) {
+	$("#dialog").dialog({ autoOpen: false });
+	$.getJSON("./linked.json", function (jsondata) {
 		var nodeArray = [];
 		var linkArray = [];
 
-		for (var key in data) {
-			var x = data[key];
+		for (var key in jsondata) {
+			var x = jsondata[key];
 			nodeArray.push({id: x.mediaId, label: x.label});
 			var linked = x.linkifiedImages;
 			for (var link in linked) {
@@ -52,7 +54,12 @@
 		var options = {};
 
 		function showPopup(nodeId) {
-			var node = data[nodeId];
+			var node = jsondata[nodeId];
+			console.log("Node label " + node.label);
+			console.log("Node b64: " + node.encodedThumbnail);
+
+			$('#dialog').html(node.label + "<br />" + node.cloudVisionTags + "<br /><img src='data:image/jpg;base64," + node.encodedThumbnail + "'/>")
+			$('#dialog').dialog('open');
 		}
 
 		// initialize your network!
