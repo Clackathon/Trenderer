@@ -3,11 +3,16 @@ package com.clackathon.vuzii;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.SneakyThrows;
+import lombok.val;
 
+import javax.imageio.ImageIO;
+import java.awt.*;
 import java.awt.image.BufferedImage;
+import java.io.ByteArrayOutputStream;
 import java.net.URL;
 import java.nio.file.Path;
 import java.time.LocalDateTime;
+import java.util.Base64;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -32,6 +37,22 @@ public class Image {
 	private LocalDateTime creationTime;
 	private Location location;
 	private Set<Long> linkifiedImages = new HashSet<>();
+	private String encodedThumbnail;
+
+	private static final int THUMBNAIL_DIMENSION = 256;
+
+	public void setStandardResolution(ImageData data) {
+		encodedThumbnail = Base64.getEncoder().encodeToString(imageBytes(data.getThumbnail()));
+		standardResolution = data;
+	}
+
+	@SneakyThrows
+	private static byte[] imageBytes(BufferedImage image) {
+		try (ByteArrayOutputStream baos = new ByteArrayOutputStream()) {
+			ImageIO.write(image, "jpg", baos);
+			return baos.toByteArray();
+		}
+	}
 
     @Data
 	@AllArgsConstructor
@@ -42,6 +63,32 @@ public class Image {
 		@SneakyThrows
 		public BufferedImage download() {
 			return ImageCache.INSTANCE.downloadImage(imageLocation, uniqueId);
+		}
+
+		public BufferedImage getThumbnail() {
+			val standard = download();
+			int height = standard.getHeight();
+			int width = standard.getWidth();
+			float hScale = height / 256;
+			float wScale = width / 256;
+			float scale = Math.max(hScale, wScale);
+			return toBufferedImage(standard.getScaledInstance((int) (height / scale), (int) (width / scale), BufferedImage.SCALE_SMOOTH));
+		}
+
+		private static BufferedImage toBufferedImage(java.awt.Image img) {
+			if (img instanceof BufferedImage)
+				return (BufferedImage) img;
+
+			// Create a buffered image with transparency
+			BufferedImage bimage = new BufferedImage(img.getWidth(null), img.getHeight(null), BufferedImage.TYPE_INT_ARGB);
+
+			// Draw the image on to the buffered image
+			Graphics2D bGr = bimage.createGraphics();
+			bGr.drawImage(img, 0, 0, null);
+			bGr.dispose();
+
+			// Return the buffered image
+			return bimage;
 		}
     }
 
