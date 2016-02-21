@@ -33,7 +33,7 @@ public class InstagramImageProvider implements ImageProvider {
 			.apiKey(apiProperties.getProperty("INSTAGRAM_KEY"))
 			.apiSecret(apiProperties.getProperty("INSTAGRAM_SECRET"))
 			.callback("http://localhost/")
-			.scope("basic public_content follower_list comments relationships like")
+			.scope("basic public_content follower_list comments relationships likes")
 			.build();
 
 		String tokenSecret = apiProperties.getProperty("INSTAGRAM_TOKEN_SECRET");
